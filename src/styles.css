@@ -350,7 +350,7 @@ html {
     max-width: 25rem; }
   
   .card-register {
-    max-width: 30rem; }
+    max-width: 45rem; }
   
   footer.sticky-footer {
     position: absolute;
@@ -525,3 +525,73 @@ html {
       bottom:0;
       right:0;
   }
+   /*Validation classes*/
+  
+   .is-error input[type=text], .is-error input[type=number], .is-error input[type=password] {
+    background: url(assets/images/warning.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 20px;
+    padding-right: 28px;
+    background-color: #fff;
+  }
+  
+  .is-warning input[type=text], .is-warning input[type=number], .is-warning input[type=password] {
+    background: url(assets/images/warning.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 20px;
+    padding-right: 28px;
+    background-color: #fff;
+  }
+  
+  .is-error input, .is-error textarea {
+    border-color: #dc3545;
+    color: #dc3545;
+  }
+  
+  .is-warning input, .is-warning textarea {
+    border-color: #dc3545;
+    color: #dc3545;
+  }
+  
+  .is-error label, .is-error select {
+    border-color: #dc3545;
+    color: #dc3545;
+  }
+  
+  p.is-error {
+    border-color: #dc3545;
+    color: #dc3545;
+  }
+  
+  .is-error input:focus, .is-error textarea:focus {
+    border-color: #dc3545;
+    box-shadow: none;
+    color: #dc3545;
+  }
+  
+  .is-warning input:focus, .is-warning textarea:focus {
+    border-color: #dc3545;
+    box-shadow: none;
+    color: #dc3545;
+  }
+  
+  .is-error select:focus {
+    border-color: #dc3545;
+    box-shadow: none;
+    color: #dc3545;
+  }
+  
+  .is-valid input[type=text], .is-valid input[type=number], .is-valid input[type=password] {
+    background: url(assets/images/right.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 20px;
+    padding-right: 28px;
+    background-color: #fff;
+  }
+  .Error {
+    color: red;
+  }
+  
