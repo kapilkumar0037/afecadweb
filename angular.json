@@ -79,7 +79,8 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.spec.json",
             "karmaConfig": "src/karma.conf.js",
-            "styles": [            
+            "styles": [  
+              "src/assets/fonts/videogular.css",      
               "src/styles.css"
             ],
             "scripts": [

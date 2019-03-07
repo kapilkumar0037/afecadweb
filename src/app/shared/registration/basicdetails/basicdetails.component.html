@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="card card-register mx-auto mt-10">
+  <div class="card card-register mx-auto mt-4">
     <div class="card-header text-center">
       <img src="assets/images/afecadLogo.jpg" />
     </div>
@@ -26,23 +26,23 @@
           </li>
         </ul>
       </div>
-      <form  name="basicDetailsForm" #basicDetailsForm="ngForm" novalidate> 
+      <form  name="basicDetailsFormt" #basicDetailsFormt="ngForm" novalidate> 
         <div class="form-group">
           <div class="form-row">
             <div class="col-md-4" [ngClass]="firstName.errors && (firstName.dirty || firstName.touched)?'is-error':firstName.valid?'is-valid':''">
               <label for="firstName">First name</label> <span class="Error" > * </span>
               <input class="form-control" id="firstName" name="firstName" type="text" aria-describedby="nameHelp" placeholder="Enter first name"
-              [(ngModel)]="basicDetailsForm.firstName"  #firstName="ngModel"  required> 
+              [(ngModel)]="basicDetailsForm.FirstName"  #firstName="ngModel"  required> 
             </div>
             <div class="col-md-4" [ngClass]="lastName.errors && (lastName.dirty || lastName.touched)?'is-error':lastName.valid?'is-valid':''">
                 <label for="lastName">Last name</label>  <span class="Error" > * </span>
                 <input class="form-control" id="lastName" name="lastName" type="text" aria-describedby="nameHelp" placeholder="Enter Last name"
-                [(ngModel)]="basicDetailsForm.lastName"  #lastName="ngModel"  required> 
+                [(ngModel)]="basicDetailsForm.LastName"  #lastName="ngModel"  required> 
               </div>
             <div class="col-md-4" [ngClass]="mobileNo.errors && (mobileNo.dirty || mobileNo.touched)?'is-error':mobileNo.valid?'is-valid':''">
               <label for="mobileNo">Mobile No.</label>  <span class="Error" > * </span>
               <input class="form-control" id="mobileNo"  name = "mobileNo" type="number"  ng-pattern="/^[0-9]{1,7}$/" placeholder="Mobile No" 
-              [(ngModel)]="basicDetailsForm.mobileNo" #mobileNo="ngModel"  required>
+              [(ngModel)]="basicDetailsForm.MobileNo" #mobileNo="ngModel"  required>
             </div>
           </div>
         </div>
@@ -52,18 +52,18 @@
             <div class="col-md-4" [ngClass]="email.errors && (email.dirty || email.touched)?'is-error':email.valid?'is-valid':''">
               <label for="email">Email address</label>  <span class="Error" > * </span>
               <input class="form-control" id="email" name="email" type="email" aria-describedby="emailHelp" placeholder="Enter email"
-              [(ngModel)]="basicDetailsForm.email" #email="ngModel"  required pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,3}$">
+              [(ngModel)]="basicDetailsForm.Email" #email="ngModel"  required pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,3}$">
             </div>
 
             <div class="col-md-4" [ngClass]="password.errors && (password.dirty || password.touched)?'is-error':password.valid?'is-valid':''">
               <label for="password">Password</label>  <span class="Error" > * </span>
               <input class="form-control" id="password" name="password" type="password" placeholder="Password"
-              [(ngModel)]="basicDetailsForm.password" #password="ngModel"  required >
+              [(ngModel)]="basicDetailsForm.Password" #password="ngModel"  required >
             </div>
             <div class="col-md-4"  [ngClass]="confirmPassword.errors && (confirmPassword.dirty || confirmPassword.touched)?'is-error':confirmPassword.valid?'is-valid':''">
               <label for="confirmPassword">Confirm password</label>  <span class="Error" > * </span>
               <input class="form-control" id="confirmPassword"  name="confirmPassword" type="password" placeholder="Confirm password"
-              [(ngModel)]="basicDetailsForm.confirmPassword" #confirmPassword="ngModel"  required>
+              [(ngModel)]="basicDetailsForm.ConfirmPassword" #confirmPassword="ngModel"  required>
             </div>
           </div>
         </div>
@@ -72,12 +72,12 @@
             <div class="col-md-4"  [ngClass]="qualification.errors && (qualification.dirty || qualification.touched)?'is-error':qualification.valid?'is-valid':''">
               <label for="qualification">Qualification</label>  <span class="Error" > * </span>
               <input class="form-control" id="qualification" name="qualification" type="text" placeholder="Qualification"
-              [(ngModel)]="basicDetailsForm.qualification" #qualification="ngModel"  required>
+              [(ngModel)]="basicDetailsForm.Qualification" #qualification="ngModel"  required>
             </div>
             <div class="col-md-4"  [ngClass]="gender.errors && (gender.dirty || gender.touched)?'is-error':gender.valid?'is-valid':''">
               <label for="gender">Gender</label>  <span class="Error" > * </span>
-              <select class="form-control" name="gender" id="gender"  [(ngModel)]="basicDetailsForm.gender" #gender="ngModel"  required>
-              <option value=""> Select</option>
+              <select class="form-control" name="gender" id="gender"  [(ngModel)]="basicDetailsForm.Gender" #gender="ngModel"  required>
+              <option value="" selected> Select</option>
               <option value="Male" >Male</option>
               <option value="Female" >Female</option>
             </select>
@@ -85,7 +85,7 @@
             <div class="col-md-4"  [ngClass]="country.errors && (country.dirty || country.touched)?'is-error':country.valid?'is-valid':''">
               <label for="country">Country</label>  <span class="Error" > * </span>
               <input class="form-control" id="country" name="country" type="text" placeholder="Country" 
-              [(ngModel)]="basicDetailsForm.country" #country="ngModel"  required>
+              [(ngModel)]="basicDetailsForm.Country" #country="ngModel"  required>
             </div>
           </div>
         </div>
@@ -103,7 +103,7 @@
             <div class="col-md-12" [ngClass]="address.errors && (address.dirty || address.touched)?'is-error':address.valid?'is-valid':''">
               <label for="address">Address </label>  <span class="Error" > * </span>
               <textarea class="form-control" id="address" name="address" type="text"  placeholder="Address"
-              [(ngModel)]="basicDetailsForm.address" #address="ngModel"  required> </textarea>
+              [(ngModel)]="basicDetailsForm.Address" #address="ngModel"  required> </textarea>
             </div>
           </div>
         </div>
@@ -112,7 +112,7 @@
             <!-- <a class="btn btn-primary" href="login.html">Next</a> -->
           </div>
           <div class="text-right col-6">
-            <button class="btn btn-primary" type="submit"  [disabled]="!basicDetailsForm.form.valid"  [routerLink]="['/selectcourse']">Next</button>
+            <button class="btn btn-primary" type="button" (click)="saveBasicDetails(basicDetailsForm)"  [disabled]="!basicDetailsFormt.form.valid"  >Next</button>
           </div>
         </div>
       </form>

@@ -11,6 +11,7 @@ import { UploadvideosComponent } from './core/uploadvideos/uploadvideos.componen
 import { SelectcourseComponent } from './shared/registration/selectcourse/selectcourse.component';
 import { BasicdetailsComponent } from './shared/registration/basicdetails/basicdetails.component';
 import { PaymentdetailsComponent } from './shared/registration/paymentdetails/paymentdetails.component';
+import { WatchComponent } from './core/watch/watch.component';
 
 const routes: Routes = [
   {
@@ -20,7 +21,7 @@ const routes: Routes = [
       { path: "basicdetails", component: BasicdetailsComponent },
       { path: "selectcourse", component: SelectcourseComponent },
       { path: "paymentdetails", component: PaymentdetailsComponent },
-      { path: "**",component: LoginComponent}
+      // { path: "**",component: LoginComponent}
 
     ]
   },
@@ -31,7 +32,8 @@ const routes: Routes = [
       { path: "mycourses", component: MycoursesComponent },
       { path: "allcourses", component: AllcoursesComponent },
       { path: "upload", component: UploadvideosComponent },
-      { path: "startcourse", component: CompletecourseComponent }
+      { path: "startcourse", component: WatchComponent }
+
 
     ]
   }
