@@ -6,7 +6,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
   providedIn: 'root' 
 })
 export class LoaderService {
-  private IsLoading$: BehaviorSubject<boolean>;
+  public IsLoading$: BehaviorSubject<boolean>;
   constructor() {
     this.IsLoading$ = new BehaviorSubject(false);
   }
@@ -16,7 +16,7 @@ export class LoaderService {
   }
 
   getHttpStatus(): Observable<boolean> {
-    return this.IsLoading$.asObservable();
+    return this.IsLoading$;
   }
 
 }

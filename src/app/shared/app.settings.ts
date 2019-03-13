@@ -2,10 +2,15 @@ export class AppSettings {
 
     //controllers
     public static Studentcontroller = "Student";
+    public static AdminController = "Admin";
+    public static SetupController = "Setup";
    
     //Methods
     public static SaveStudentDetails = "SaveStudentDetails";
-    public static getCourses = "fetchCourses";
+    public static getCourses = "GetAllCourses";
+    public static AddCourse = "AddCourse";
+    public static saveCourses = "saveCourses";
+    public static getCountries = "getCountries";
 }
 export class SessionVariables {
     public static CurrentUser = "currentUser";

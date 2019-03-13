@@ -1,110 +1,139 @@
 <nav class="navbar navbar-expand-lg  bg-info fixed-top text-white" id="mainNav">
     <a class="navbar-brand" href="index.html">
-<img src="assets/images/afecadLogo.jpg" />
+        <img src="assets/images/afecadLogo.jpg" />
         <!-- <img src="images/seblogo.png" style="width:100%" /> -->
     </a>
-    <button class="navbar-toggler navbar-toggler-right text-white" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler navbar-toggler-right text-white" type="button" data-toggle="collapse"
+        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+        aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"><i class="fa fa-fw fa-bars"></i></span>
 
     </button>
-    <div class="collapse navbar-collapse " id="navbarResponsive">           
+    <div class="collapse navbar-collapse " id="navbarResponsive">
         <ul class="navbar-nav navbar-sidenav bg-info text-white" id="exampleAccordion">
 
-            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
-                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#systemConfiguration" data-parent="#exampleAccordion">
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="">
+                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#courses"
+                    data-parent="#exampleAccordion">
                     <i class="fa fa-fw fa-book"></i>
-                    <span class="nav-link-text">My Courses</span>
+                    <span class="nav-link-text">Courses</span>
                 </a>
-                <!-- <ul class="sidenav-second-level collapse" id="systemConfiguration"> -->
-                    <!-- <li> -->
-                        <!-- <a href="#"> -->
-                            <!-- <i class="fa fa-fw fa-angle-right"></i> -->
+                <ul class="sidenav-second-level collapse" id="courses">
+                    <li>
+                        <a [routerLink]="['/addcourse']">
+                            <i class="fa fa-fw fa-angle-right"></i>
+                            Add Course
+                        </a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/courselist']">
+                            <i class="fa fa-fw fa-angle-right"></i>
+                            View All Courses
+                        </a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/addvideos']">
+                            <i class="fa fa-fw fa-angle-right"></i>
+                            Add Videos
+                        </a>
+                    </li>
 
-                            <!-- Client Setup -->
-                        <!-- </a> -->
-                    <!-- </li> -->
-                    <!-- <li> -->
-                        <!-- <a href="#"> -->
-                            <!-- <i class="fa fa-fw fa-angle-right"></i> -->
-                            <!-- Plan Setup -->
-                        <!-- </a> -->
-                    <!-- </li> -->
-                    <!-- <li> -->
-                        <!-- <a href="#"> -->
-                            <!-- <i class="fa fa-fw fa-angle-right"></i> -->
-                            <!-- Manage Records -->
-                        <!-- </a> -->
-                    <!-- </li> -->
-
-                <!-- </ul> -->
+                </ul>
             </li>
-            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
-                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#administration" data-parent="#exampleAccordion">
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="">
+                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#myassignments"
+                    data-parent="#exampleAccordion">
                     <i class="fa fa-fw fa-book"></i>
                     <span class="nav-link-text">My Assignments</span>
                 </a>
-                <!-- <ul class="sidenav-second-level collapse" id="administration"> -->
-                    <!-- <li> -->
-                        <!-- <a href="EmployeeSearch.html"> -->
-                            <!-- <i class="fa fa-fw fa-angle-right"></i>Employee Search -->
-                        <!-- </a> -->
-                    <!-- </li> -->
-                    <!-- <li> -->
-                        <!-- <a href="#"> -->
-                            <!-- <i class="fa fa-fw fa-angle-right"></i>Import Data -->
-                        <!-- </a> -->
-                    <!-- </li> -->
-                    <!-- <li> -->
-                        <!-- <a href="#"> -->
-                            <!-- <i class="fa fa-fw fa-angle-right"></i>Monthly Billing -->
-                        <!-- </a> -->
-                    <!-- </li> -->
-                    <!-- <li> -->
-                        <!-- <a href=""> -->
-                            <!-- <i class="fa fa-fw fa-angle-right"></i>NFS Entity -->
-                        <!-- </a> -->
-                    <!-- </li> -->
-                <!-- </ul> -->
+                <ul class="sidenav-second-level collapse" id="myassignments">
+                    <li>
+                        <a>
+                            <i class="fa fa-fw fa-angle-right"></i> Download Assignment
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-fw fa-angle-right"></i> Upload Assignment
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-fw fa-angle-right"></i> Mock Test
+                        </a>
+                    </li>
+                </ul>
             </li>
-            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
-                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#pcsReports" data-parent="#exampleAccordion">
+            <!-- <li class="nav-item" data-toggle="tooltip" data-placement="right" title=""> -->
+            <!-- <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#pcsReports" -->
+            <!-- data-parent="#exampleAccordion"> -->
+            <!-- <i class="fa fa-fw fa-file"></i> -->
+            <!-- <span class="nav-link-text">All Courses</span> -->
+            <!-- </a> -->
+            <!-- <ul class="sidenav-second-level collapse" id="pcsReports"> -->
+            <!-- <li> -->
+            <!-- <a href="#"> -->
+            <!-- <i class="fa fa-fw fa-angle-right"></i>Create Bank Files -->
+            <!-- </a> -->
+            <!-- </li> -->
+            <!-- <li> -->
+            <!-- <a href="#"> -->
+            <!-- <i class="fa fa-fw fa-angle-right"></i>30 Days Memo -->
+            <!-- </a> -->
+            <!-- </li> -->
+            <!-- <li> -->
+            <!-- <a href="#"> -->
+            <!-- <i class="fa fa-fw fa-angle-right"></i>60 Days Memo -->
+            <!-- </a> -->
+            <!-- </li> -->
+            <!-- <li> -->
+            <!-- <a href="#"> -->
+            <!-- <i class="fa fa-fw fa-angle-right"></i>Termination Notice -->
+            <!-- </a> -->
+            <!-- </li> -->
+            <!-- <li> -->
+            <!-- <a href="#"> -->
+            <!-- <i class="fa fa-fw fa-angle-right"></i>Change Notice -->
+            <!-- </a> -->
+            <!-- </li> -->
+            <!-- <li> -->
+            <!-- <a href="#"> -->
+            <!-- <i class="fa fa-fw fa-angle-right"></i>Reports -->
+            <!-- </a> -->
+            <!-- </li> -->
+            <!-- </ul> -->
+            <!-- </li> -->
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="">
+                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#myProjects"
+                    data-parent="#exampleAccordion">
                     <i class="fa fa-fw fa-file"></i>
-                    <span class="nav-link-text">All Courses</span>
+                    <span class="nav-link-text">My Projects</span>
                 </a>
-                <!-- <ul class="sidenav-second-level collapse" id="pcsReports"> -->
-                    <!-- <li> -->
-                        <!-- <a href="#"> -->
-                            <!-- <i class="fa fa-fw fa-angle-right"></i>Create Bank Files -->
-                        <!-- </a> -->
-                    <!-- </li> -->
-                    <!-- <li> -->
-                        <!-- <a href="#"> -->
-                            <!-- <i class="fa fa-fw fa-angle-right"></i>30 Days Memo -->
-                        <!-- </a> -->
-                    <!-- </li> -->
-                    <!-- <li> -->
-                        <!-- <a href="#"> -->
-                            <!-- <i class="fa fa-fw fa-angle-right"></i>60 Days Memo -->
-                        <!-- </a> -->
-                    <!-- </li> -->
-                    <!-- <li> -->
-                        <!-- <a href="#"> -->
-                            <!-- <i class="fa fa-fw fa-angle-right"></i>Termination Notice -->
-                        <!-- </a> -->
-                    <!-- </li> -->
-                    <!-- <li> -->
-                        <!-- <a href="#"> -->
-                            <!-- <i class="fa fa-fw fa-angle-right"></i>Change Notice -->
-                        <!-- </a> -->
-                    <!-- </li> -->
-                    <!-- <li> -->
-                        <!-- <a href="#"> -->
-                            <!-- <i class="fa fa-fw fa-angle-right"></i>Reports -->
-                        <!-- </a> -->
-                    <!-- </li> -->
-                <!-- </ul> -->
+                <ul class="sidenav-second-level collapse" id="myProjects">
+                    <li>
+                        <a>
+                            <i class="fa fa-fw fa-angle-right"></i> Upload Project
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-fw fa-angle-right"></i> Upload Resume
+                        </a>
+                    </li>
+                </ul>
             </li>
-
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="">
+                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#myCertificates"
+                    data-parent="#exampleAccordion">
+                    <i class="fa fa-fw fa-file"></i>
+                    <span class="nav-link-text">My Certificates</span>
+                </a>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="">
+                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#myebooks"
+                    data-parent="#exampleAccordion">
+                    <i class="fa fa-fw fa-file"></i>
+                    <span class="nav-link-text">My e-books</span>
+                </a>
+            </li>
         </ul>
         <ul class="navbar-nav sidenav-toggler">
             <li class="nav-item">
@@ -121,51 +150,51 @@
                 </h4>
             </li>
             <!-- <li class="nav-item dropdown"> -->
-                <!-- <a class="nav-link dropdown-toggle mr-lg-2" id="alertsDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> -->
-                    <!-- <i class="fa fa-fw fa-bell"></i> -->
-                    <!-- <span class="d-lg-none"> -->
-                        <!-- Alerts -->
-                        <!-- <span class="badge badge-pill badge-warning">6 New</span> -->
-                    <!-- </span> -->
-                    <!-- <span class="indicator text-warning d-none d-lg-block"> -->
-                        <!-- <i class="fa fa-fw fa-circle"></i> -->
-                    <!-- </span> -->
-                <!-- </a> -->
-                <!-- <div class="dropdown-menu" aria-labelledby="alertsDropdown"> -->
-                    <!-- <h6 class="dropdown-header">New Alerts:</h6> -->
-                    <!-- <div class="dropdown-divider"></div> -->
-                    <!-- <a class="dropdown-item" href="#"> -->
-                        <!-- <span class="text-success"> -->
-                            <!-- <strong> -->
-                                <!-- <i class="fa fa-long-arrow-up fa-fw"></i>Status Update -->
-                            <!-- </strong> -->
-                        <!-- </span> -->
-                        <!-- <span class="small float-right text-muted">11:21 AM</span> -->
-                        <!-- <div class="dropdown-message small">This is an automated server response message. All systems are online.</div> -->
-                    <!-- </a> -->
-                    <!-- <div class="dropdown-divider"></div> -->
-                    <!-- <a class="dropdown-item" href="#"> -->
-                        <!-- <span class="text-danger"> -->
-                            <!-- <strong> -->
-                                <!-- <i class="fa fa-long-arrow-down fa-fw"></i>Status Update -->
-                            <!-- </strong> -->
-                        <!-- </span> -->
-                        <!-- <span class="small float-right text-muted">11:21 AM</span> -->
-                        <!-- <div class="dropdown-message small">This is an automated server response message. All systems are online.</div> -->
-                    <!-- </a> -->
-                    <!-- <div class="dropdown-divider"></div> -->
-                    <!-- <a class="dropdown-item" href="#"> -->
-                        <!-- <span class="text-success"> -->
-                            <!-- <strong> -->
-                                <!-- <i class="fa fa-long-arrow-up fa-fw"></i>Status Update -->
-                            <!-- </strong> -->
-                        <!-- </span> -->
-                        <!-- <span class="small float-right text-muted">11:21 AM</span> -->
-                        <!-- <div class="dropdown-message small">This is an automated server response message. All systems are online.</div> -->
-                    <!-- </a> -->
-                    <!-- <div class="dropdown-divider"></div> -->
-                    <!-- <a class="dropdown-item small" href="#">View all alerts</a> -->
-                <!-- </div> -->
+            <!-- <a class="nav-link dropdown-toggle mr-lg-2" id="alertsDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> -->
+            <!-- <i class="fa fa-fw fa-bell"></i> -->
+            <!-- <span class="d-lg-none"> -->
+            <!-- Alerts -->
+            <!-- <span class="badge badge-pill badge-warning">6 New</span> -->
+            <!-- </span> -->
+            <!-- <span class="indicator text-warning d-none d-lg-block"> -->
+            <!-- <i class="fa fa-fw fa-circle"></i> -->
+            <!-- </span> -->
+            <!-- </a> -->
+            <!-- <div class="dropdown-menu" aria-labelledby="alertsDropdown"> -->
+            <!-- <h6 class="dropdown-header">New Alerts:</h6> -->
+            <!-- <div class="dropdown-divider"></div> -->
+            <!-- <a class="dropdown-item" href="#"> -->
+            <!-- <span class="text-success"> -->
+            <!-- <strong> -->
+            <!-- <i class="fa fa-long-arrow-up fa-fw"></i>Status Update -->
+            <!-- </strong> -->
+            <!-- </span> -->
+            <!-- <span class="small float-right text-muted">11:21 AM</span> -->
+            <!-- <div class="dropdown-message small">This is an automated server response message. All systems are online.</div> -->
+            <!-- </a> -->
+            <!-- <div class="dropdown-divider"></div> -->
+            <!-- <a class="dropdown-item" href="#"> -->
+            <!-- <span class="text-danger"> -->
+            <!-- <strong> -->
+            <!-- <i class="fa fa-long-arrow-down fa-fw"></i>Status Update -->
+            <!-- </strong> -->
+            <!-- </span> -->
+            <!-- <span class="small float-right text-muted">11:21 AM</span> -->
+            <!-- <div class="dropdown-message small">This is an automated server response message. All systems are online.</div> -->
+            <!-- </a> -->
+            <!-- <div class="dropdown-divider"></div> -->
+            <!-- <a class="dropdown-item" href="#"> -->
+            <!-- <span class="text-success"> -->
+            <!-- <strong> -->
+            <!-- <i class="fa fa-long-arrow-up fa-fw"></i>Status Update -->
+            <!-- </strong> -->
+            <!-- </span> -->
+            <!-- <span class="small float-right text-muted">11:21 AM</span> -->
+            <!-- <div class="dropdown-message small">This is an automated server response message. All systems are online.</div> -->
+            <!-- </a> -->
+            <!-- <div class="dropdown-divider"></div> -->
+            <!-- <a class="dropdown-item small" href="#">View all alerts</a> -->
+            <!-- </div> -->
             <!-- </li> -->
 
             <li class="nav-item">

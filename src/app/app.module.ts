@@ -30,6 +30,7 @@ import { StaticData } from './shared/static.data';
 import { UserService } from './shared/services/user/user.service';
 import { LoaderService } from './shared/services/loader.service';
 import { WatchComponent } from './core/watch/watch.component';
+import { CourseViewComponent } from './core/course-view/course-view.component';
 
 
 @NgModule({
@@ -47,7 +48,8 @@ import { WatchComponent } from './core/watch/watch.component';
     SelectcourseComponent,
     BasicdetailsComponent,
     PaymentdetailsComponent,
-    WatchComponent
+    WatchComponent,
+    CourseViewComponent
   ],
   imports: [
     BrowserModule,

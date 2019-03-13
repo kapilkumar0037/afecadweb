@@ -7,10 +7,10 @@ import { UserService } from '../services/user/user.service';
 import { SessionVariables } from '../app.settings';
 import { LoaderService } from '../services/loader.service';
 import { Observable, of } from 'rxjs';
-import { catchError } from 'rxjs/internal/operators';
+import { catchError, map } from 'rxjs/internal/operators';
 
-@Injectable({ 
-  providedIn: 'root' 
+@Injectable({
+  providedIn: 'root'
 })
 export class TokenHttpInterceptor implements HttpInterceptor {
   constructor(private user: UserService, private loaderService: LoaderService) { }
@@ -24,11 +24,18 @@ export class TokenHttpInterceptor implements HttpInterceptor {
         }
       });
     }
-    return next.handle(req).pipe(catchError((error, caught) => {
-      console.log(error);
-      this.handleAuthError(error);
-      return of(error);
-    }) as any);
+    return next.handle(req).pipe(
+      map((event: HttpEvent<any>) => {
+        if (event instanceof HttpResponse) {
+          this.loaderService.setHttpStatus(false);
+        }
+        return event;
+      }),
+      catchError((error, caught) => {
+        console.log(error);
+        this.handleAuthError(error);
+        return of(error);
+      }) as any);
   }
   private handleAuthError(err: HttpErrorResponse): Observable<any> {
     if (err.status === 401) {

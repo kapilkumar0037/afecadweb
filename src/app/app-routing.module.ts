@@ -12,6 +12,7 @@ import { SelectcourseComponent } from './shared/registration/selectcourse/select
 import { BasicdetailsComponent } from './shared/registration/basicdetails/basicdetails.component';
 import { PaymentdetailsComponent } from './shared/registration/paymentdetails/paymentdetails.component';
 import { WatchComponent } from './core/watch/watch.component';
+import { CourseViewComponent } from './core/course-view/course-view.component';
 
 const routes: Routes = [
   {
@@ -32,8 +33,8 @@ const routes: Routes = [
       { path: "mycourses", component: MycoursesComponent },
       { path: "allcourses", component: AllcoursesComponent },
       { path: "upload", component: UploadvideosComponent },
-      { path: "startcourse", component: WatchComponent }
-
+      { path: "startcourse", component: WatchComponent },
+      { path: "courselist", component: CourseViewComponent }
 
     ]
   }

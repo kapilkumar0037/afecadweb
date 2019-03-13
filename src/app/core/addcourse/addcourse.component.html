@@ -1,3 +1,100 @@
-<p>
-  addcourse works!
-</p>
+<div class="container-fluid">
+  <!-- Breadcrumbs-->
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item active">
+      <h3>Add Course </h3>
+    </li>
+    <!--<li class="breadcrumb-item active">System Configuration</li>-->
+  </ol>
+  <!-- Icon Cards-->
+  <div class="row">
+
+    <div class="col-sm-8 col-md-8 col-lg-8 mb-3">
+
+      <form name="addCourseForm" #addCourseForm="ngForm" novalidate>
+        <div class="form-group">
+          <div class="form-row">
+            <div class="col-md-6"
+              [ngClass]="courseName.errors && (courseName.dirty || courseName.touched)?'is-error':courseName.valid?'is-valid':''">
+              <label for="courseName">Course Name</label> <span class="Error"> * </span>
+              <input class="form-control" id="courseName" name="courseName" type="text" aria-describedby="nameHelp"
+                placeholder="Enter course name" [(ngModel)]="Course.Course_Name" #courseName="ngModel" required>
+            </div>
+            <div class="col-md-6"
+              [ngClass]="author.errors && (author.dirty || author.touched)?'is-error':author.valid?'is-valid':''">
+              <label for="author">Author</label> <span class="Error"> * </span>
+              <input class="form-control" id="author" name="author" type="text" aria-describedby="nameHelp"
+                placeholder="Course author name" [(ngModel)]="Course.Author" #author="ngModel" required>
+            </div>
+
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="form-row">
+
+            <div class="col-md-6"
+              [ngClass]="courseDuration.errors && (courseDuration.dirty || courseDuration.touched)?'is-error':courseDuration.valid?'is-valid':''">
+              <label for="courseDuration">Duration</label> <span class="Error"> * </span>
+              <input class="form-control" id="courseDuration" name="courseDuration" type="text"
+                placeholder="Course Duration" [(ngModel)]="Course.Course_Duration" #courseDuration="ngModel" required>
+            </div>
+            <div class="col-md-6"
+              [ngClass]="courseLang.errors && (courseLang.dirty || courseLang.touched)?'is-error':courseLang.valid?'is-valid':''">
+              <label for="courseLang">Language</label> <span class="Error"> * </span>
+              <select class="form-control" name="courseLang" id="courseLang" [(ngModel)]="Course.Lang"
+                #courseLang="ngModel" required>
+                <option value="en-US">English</option>
+                <option value="fr-CA">French</option>
+              </select>
+            </div>
+
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="form-row">
+            <div class="col-md-6"
+              [ngClass]="courseFee.errors && (courseFee.dirty || courseFee.touched)?'is-error':courseFee.valid?'is-valid':''">
+              <label for="courseFee">Fee</label> <span class="Error"> * </span>
+              <input class="form-control" id="courseFee" name="courseFee" type="text" placeholder="Course Fee"
+                [(ngModel)]="Course.Course_Fee" #courseFee="ngModel" required>
+            </div>
+            <div class="col-md-6"
+              [ngClass]="courseDiscount.errors && (courseDiscount.dirty || courseDiscount.touched)?'is-error':courseDiscount.valid?'is-valid':''">
+              <label for="courseDiscount">Discount</label> <span class="Error"> * </span>
+              <input class="form-control" id="courseDiscount" name="courseDiscount" type="text"
+                placeholder="Course Discount" [(ngModel)]="Course.Course_Discount" #courseDiscount="ngModel" required>
+            </div>
+
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="form-row">
+            <div class="col-md-12"
+              [ngClass]="courseDescription.errors && (courseDescription.dirty || courseDescription.touched)?'is-error':courseDescription.valid?'is-valid':''">
+              <label for="courseDescription">Course Description</label> <span class="Error"> * </span>
+              <textarea class="form-control" id="courseDescription" name="courseDescription" type="text"
+                placeholder="Course Description" [(ngModel)]="Course.Course_Desc" #courseDescription="ngModel"
+                required> </textarea>
+            </div>
+          </div>
+        </div>
+        <div class="alert alert-success" *ngIf="showSuccess">
+          {{messages.success}}
+        </div>
+        <div class="alert alert-danger" *ngIf="showError">
+          {{messages.error}}
+        </div>
+        <div class="row">          
+          <div class="col-6">
+            <button class="btn btn-primary mr-2" type="button" (click)="reset()" >Reset</button>
+            <button class="btn btn-primary" type="button" (click)="addCourse(Course)"
+              [disabled]="!addCourseForm.form.valid">Submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+  </div>
+
+
+</div>

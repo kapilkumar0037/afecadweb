@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PortalService } from 'src/app/core/services/portal.service';
+import {Router } from '@angular/router';
 
 @Component({
   selector: 'app-basicdetails',
@@ -8,22 +9,31 @@ import { PortalService } from 'src/app/core/services/portal.service';
 })
 export class BasicdetailsComponent implements OnInit {
   basicDetailsForm: any = {};
-  constructor(private service: PortalService) { }
+  countryList: any [];
+ 
+  constructor(private service: PortalService , private router : Router) { }
 
   ngOnInit() {
+   this.getCountries();
   }
   saveBasicDetails(basicDetailsForm:any) {
     this.service.saveBasicDetails(basicDetailsForm).subscribe((data) => {
       console.log(data);
+      this.router.navigate(['/selectcourse']);
     }, (error) => {
       console.log(error)
+     
     })
   }
-  getCourses() {
-    this.service.getCourses("").subscribe((data) => {
+ 
+  getCountries(){
+    this.service.getCountries("").subscribe((data) => {
+      debugger;
+      this.countryList = data;
       console.log(data);
     }, (error) => {
       console.log(error)
+    
     })
   }
 }

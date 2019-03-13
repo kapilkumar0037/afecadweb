@@ -33,10 +33,10 @@
       <form  name="paymentDetailsForm" #paymentDetailsForm="ngForm" novalidate>
         <div class="form-group">
           <div class="form-row">
-            <div class="col-md-6"  [ngClass]="centerID.errors && (centerID.dirty || centerID.touched)?'is-error':centerID.valid?'is-valid':''">
-              <label for="centerID">Center ID/Reference by</label>  <span class="Error" > * </span>
+            <div class="col-md-6"  >
+              <label for="centerID">Center ID/Reference by</label>  
               <input class="form-control" id="centerID" name="centerID" type="text" aria-describedby="nameHelp"
-                placeholder="Enter Center ID"   [(ngModel)]="paymentDetailsForm.centerID" #centerID="ngModel"  required >
+                placeholder="Enter Center ID"   [(ngModel)]="paymentDetailsForm.centerID" #centerID="ngModel"   >
             </div>
 
 
@@ -48,15 +48,15 @@
 
           </div>
           <div class="form-row">
-            <div class="col-md-6" [ngClass]="amount.errors && (amount.dirty || amount.touched)?'is-error':amount.valid?'is-valid':''">
-              <label for="amount">Amount</label>  <span class="Error" > * </span>
+            <div class="col-md-6" >
+              <label for="amount">Amount</label>  
               <input class="form-control" id="amount" name="amount" type="text" aria-describedby="nameHelp" placeholder="Enter Amount"
-              [(ngModel)]="paymentDetailsForm.amount" #amount="ngModel"  required >
+              [(ngModel)]="paymentDetailsForm.amount" #amount="ngModel"   >
             </div>
-            <div class="col-md-6"  [ngClass]="currency.errors && (currency.dirty || currency.touched)?'is-error':currency.valid?'is-valid':''">
-              <label for="currency">Currency</label>  <span class="Error" > * </span>
+            <div class="col-md-6"  >
+              <label for="currency">Currency</label> 
               <input class="form-control" id="Currency" name="Currency" type="text" placeholder="Currency"
-              [(ngModel)]="paymentDetailsForm.currency" #currency="ngModel"  required >
+              [(ngModel)]="paymentDetailsForm.currency" #currency="ngModel"   >
             </div>
 
           </div>
