@@ -11,6 +11,7 @@ export class AppSettings {
     public static AddCourse = "AddCourse";
     public static saveCourses = "saveCourses";
     public static getCountries = "getCountries";
+    public static UploadFiles = "UploadFiles";
 }
 export class SessionVariables {
     public static CurrentUser = "currentUser";

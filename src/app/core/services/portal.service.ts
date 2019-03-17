@@ -34,4 +34,9 @@ export class PortalService {
       return res;
     }));
   }
+  uploadVideos(data) {
+    return this.restService.postReqContext(AppSettings.AdminController, AppSettings.UploadFiles, data).pipe(map(res => {
+      return res;
+    }));
+  }
 }
