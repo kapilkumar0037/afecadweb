@@ -13,6 +13,7 @@ import { BasicdetailsComponent } from './shared/registration/basicdetails/basicd
 import { PaymentdetailsComponent } from './shared/registration/paymentdetails/paymentdetails.component';
 import { WatchComponent } from './core/watch/watch.component';
 import { CourseViewComponent } from './core/course-view/course-view.component';
+import { EnrollmentComponent } from './core/enrollment/enrollment.component';
 
 const routes: Routes = [
   {
@@ -22,7 +23,7 @@ const routes: Routes = [
       { path: "basicdetails", component: BasicdetailsComponent },
       { path: "selectcourse", component: SelectcourseComponent },
       { path: "paymentdetails", component: PaymentdetailsComponent },
-      // { path: "**",component: LoginComponent}
+    { path: '', redirectTo: '/login', pathMatch: 'full' },
 
     ]
   },
@@ -34,15 +35,18 @@ const routes: Routes = [
       { path: "allcourses", component: AllcoursesComponent },
       { path: "upload", component: UploadvideosComponent },
       { path: "startcourse", component: WatchComponent },
-      { path: "courselist", component: CourseViewComponent }
+      { path: "courselist", component: CourseViewComponent },
+      { path: "enrollments", component: EnrollmentComponent }
 
     ]
-  }
+  },
+  { path: '**', redirectTo: '/login', pathMatch: 'full' },
+
 
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {useHash: true})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

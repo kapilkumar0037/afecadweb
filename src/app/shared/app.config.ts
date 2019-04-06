@@ -4,6 +4,7 @@ import { Global } from './global';
 export class AppConfig {
     public static Environment=EnvironmentTypes.DEV; 
     
+    //public Server = "https://design.afecad.com/";
     public Server = "http://localhost:56308/";
     public ApiUrl = "api/";
     public PostApiUrl = "PORTALAPI";

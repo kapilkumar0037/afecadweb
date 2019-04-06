@@ -26,7 +26,7 @@ export class DatabaseOperationsService {
   login(logindata) {
 
     //Global.loginType=LoginType.Direct;
-    let data = "grant_type=password&username=" + encodeURIComponent(logindata.username) + "&password=" + encodeURIComponent(logindata.password) + "&DBPClientid=" + encodeURIComponent(logindata.clientId) + "&IsPortal=" + encodeURIComponent('true');
+    let data = "grant_type=password&username=" + encodeURIComponent(logindata.username) + "&password=" + encodeURIComponent(logindata.password) ;
     return this.http.post<any>(this.config.ServerWithLoginUrl, data, httpOptionsLogin);
   };
   LaunchAsAdmin(logindata) {

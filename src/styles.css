@@ -15,7 +15,7 @@ html {
       min-height: calc(100vh - 56px - 56px); }
   
   div.fixed-nav {
-    padding-top: 70px; }
+    padding-top: 60px; }
   
   .content-wrapper {
     min-height: calc(100vh - 56px);
@@ -130,7 +130,7 @@ html {
         -webkit-flex-direction: column;
         -ms-flex-direction: column;
         flex-direction: column;
-        margin-top: 85px; }
+        margin-top: 70px; }
         #mainNav .navbar-collapse .navbar-sidenav > .nav-item {
           width: 250px;
           padding: 0; 
@@ -643,4 +643,11 @@ input.form-control, select.form-control {
     margin-top: -32px; /* -1 * image height / 2 */
     display: block;
     width: 100px;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
 }

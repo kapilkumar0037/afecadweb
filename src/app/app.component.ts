@@ -11,7 +11,7 @@ export class AppComponent {
   title = 'afecadweb';
   loading: boolean=false;
   constructor(private loaderService:LoaderService){
-    this.loaderService.getHttpStatus().pipe(data=>data).subscribe((status: boolean) => {
+    this.loaderService.getHttpStatus().subscribe((status: boolean) => {
       this.loading = status;
     });
   }

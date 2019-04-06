@@ -1,0 +1,55 @@
+<div class="container-fluid">
+  <!-- Breadcrumbs-->
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item active">
+      <h3>Enrollment</h3>
+    </li>
+    <!--<li class="breadcrumb-item active">System Configuration</li>-->
+  </ol>
+  <!-- Icon Cards-->
+  <div class="row">  
+    <div class="col-sm-12 col-md-12 col-lg-10 mb-3">         
+            <div class="card border-info">
+                <div class="card-header bg-info text-white">
+                    <div class="row">
+                        <div class="col-12">
+                            <h6><span >Enrollment</span></h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-block">
+                    <div class="table-responsive" >
+                        <table class="table table-striped table-sm">
+                            <thead>
+                              <tr>
+                                <th scope="col">Name</th>
+                                <th scope="col">Mobile No</th>
+                                <th scope="col">Email</th>                                
+                                <th scope="col">Course</th>
+                                <th scope="col">Qualification</th>
+                                <th scope="col">Referred By</th>
+                                <th scope="col">Approve</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr *ngFor="let item of registraionData">
+                                <td>{{item.Name}}</td>                                
+                                <td>{{item.MobileNo}}</td>
+                                <td>{{item.Email}}</td>
+                                <td>{{item.Course_Name}}</td>
+                                <td>{{item.Qualification}}</td>
+                                <td>{{item.CenterID}}</td>
+                                <td><a class="btn btn-success btn-sm" (click)="approveUser(item.UserId)">Approve</a></td>                     
+                                </tr>
+                              
+                            </tbody>
+                          </table>
+                    </div>                      
+                </div>
+
+            </div>
+      
+    </div>
+
+  </div>
+</div>

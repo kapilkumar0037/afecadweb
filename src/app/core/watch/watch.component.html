@@ -2,7 +2,7 @@
   <!-- Breadcrumbs-->
   <ol class="breadcrumb">
     <li class="breadcrumb-item active">
-      <h3>My Courses </h3>
+      <h3>Complete Course</h3>
     </li>
   </ol>
   <!-- Icon Cards-->
@@ -49,13 +49,24 @@
 
     </div>
     <div class="col-3">
-        <ul class="playlist">
-            <li *ngFor="let item of playlist; let $index = index"
-                (click)="onClickPlaylistItem(item, $index)"
-                [class.selected]="item === currentItem">
-                <i class="fa fa-fw fa-play-circle"></i> {{ item.title }}
+      <div class="card border-info">
+        <div class="card-header bg-info text-white">
+          <div class="row">
+            <div class="col-12">
+              <h6><span>Course Playlist</span></h6>
+            </div>
+
+          </div>
+        </div>
+        <div class="card-block">
+          <ul class="playlist">
+            <li *ngFor="let item of playlist; let $index = index" (click)="onClickPlaylistItem(item, $index)"
+              [class.selected]="item === currentItem">
+              <strong>{{$index +1}}.</strong> <i class="fa fa-fw fa-play-circle"></i> {{ item.title }}
             </li>
-         </ul>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
 

@@ -1,14 +1,14 @@
 import { Injectable } from '@angular/core';
 import { Global } from '../global';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject, Observable, Subject } from 'rxjs';
 //import { Observable } from 'rxjs/Rx';
 @Injectable({ 
   providedIn: 'root' 
 })
 export class LoaderService {
-  public IsLoading$: BehaviorSubject<boolean>;
+  public IsLoading$: Subject<boolean>;
   constructor() {
-    this.IsLoading$ = new BehaviorSubject(false);
+    this.IsLoading$ = new Subject();
   }
 
   setHttpStatus(inFlight: boolean) {

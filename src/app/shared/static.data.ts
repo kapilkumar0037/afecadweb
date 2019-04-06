@@ -1,7 +1,7 @@
 export class StaticData {
     public static WebApiUrl =
         {
-            Dev: "http://localhost:56308/",
+            Dev: "https://design.afecad.com/",
            
         }
 }

@@ -31,6 +31,7 @@ import { UserService } from './shared/services/user/user.service';
 import { LoaderService } from './shared/services/loader.service';
 import { WatchComponent } from './core/watch/watch.component';
 import { CourseViewComponent } from './core/course-view/course-view.component';
+import { EnrollmentComponent } from './core/enrollment/enrollment.component';
 
 
 @NgModule({
@@ -49,7 +50,8 @@ import { CourseViewComponent } from './core/course-view/course-view.component';
     BasicdetailsComponent,
     PaymentdetailsComponent,
     WatchComponent,
-    CourseViewComponent
+    CourseViewComponent,
+    EnrollmentComponent
   ],
   imports: [
     BrowserModule,

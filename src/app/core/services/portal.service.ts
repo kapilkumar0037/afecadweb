@@ -39,4 +39,24 @@ export class PortalService {
       return res;
     }));
   }
+  getCourseVideos(data) {
+    return this.restService.postApiReq(AppSettings.AdminController, AppSettings.GetCourseVideosById, data).pipe(map(res => {
+      return res;
+    }));
+  }
+  GetRegistraionData(data) {
+    return this.restService.postApiReq(AppSettings.AdminController, AppSettings.GetRegistraionData, data).pipe(map(res => {
+      return res;
+    }));
+  }
+  approveUser(data) {
+    return this.restService.postApiReq(AppSettings.AdminController, AppSettings.ApproveUser, data).pipe(map(res => {
+      return res;
+    }));
+  }
+  SavePaymentDetails(data) {
+    return this.restService.postReqContext(AppSettings.Studentcontroller, AppSettings.UploadImage, data).pipe(map(res => {
+      return res;
+    }));
+  }
 }

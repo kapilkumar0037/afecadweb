@@ -12,6 +12,12 @@ export class AppSettings {
     public static saveCourses = "saveCourses";
     public static getCountries = "getCountries";
     public static UploadFiles = "UploadFiles";
+    public static GetCourseVideosById = "GetCourseVideosById";
+    public static GetRegistraionData = "GetRegistrationData";
+    public static ApproveUser = "ApproveUser";
+    public static UploadImage = "UploadImage";
+
+
 }
 export class SessionVariables {
     public static CurrentUser = "currentUser";
